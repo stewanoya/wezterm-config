@@ -18,12 +18,13 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	config.default_prog = { "pwsh.exe", "-NoLogo" }
 
 	table.insert(launch_menu, {
-		label = "PowerShell",
-		args = { "powershell.exe", "-NoLogo" },
-	})
-	table.insert(launch_menu, {
 		label = "Pwsh",
 		args = { "pwsh.exe", "-NoLogo" },
+	})
+	
+	table.insert(launch_menu, {
+		label = "PowerShell",
+		args = { "powershell.exe", "-NoLogo" },
 	})
 end
 
