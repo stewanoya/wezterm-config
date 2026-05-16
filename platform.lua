@@ -12,6 +12,12 @@ function M.apply(config)
 			{ label = "Pwsh", args = { "pwsh.exe", "-NoLogo" } },
 			{ label = "PowerShell", args = { "powershell.exe", "-NoLogo" } },
 		}
+	elseif wezterm.target_triple:find("linux") then
+		config.default_prog = { "zsh" }
+		config.launch_menu = {
+			{ label = "Zsh", args = { "zsh" } },
+			{ label = "Bash", args = { "bash" } },
+		}
 	end
 end
 
